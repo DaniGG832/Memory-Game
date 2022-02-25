@@ -35,9 +35,10 @@ function juego() {
       {numero:4, color: 'yellow', girada: false, borrada: false },
       
     ],
+  
 
     puntosnegativos: 0,
-
+    esperar:false,
     open: true,
     reiniciar: false,
 
@@ -67,8 +68,10 @@ function juego() {
       if (this.cartasGiradas.length == 2) {
         return;
       }
+      if(this.esperar){
 
-      carta.girada = !carta.girada;
+        carta.girada = !carta.girada;
+      }
       if (this.cartasGiradas.length == 2) {
         setTimeout(() => {
           if (this.cartasGiradas[0].color == this.cartasGiradas[1].color&&
@@ -92,7 +95,7 @@ function juego() {
       }
     },
     iniciar() {
-      //this.cartas.sort(() => Math.random() - .5);
+      this.cartas.sort(() => Math.random() - .5);
       this.iniciarJuego();
       this.mostrarcartas();
       this.open = false;
@@ -101,6 +104,8 @@ function juego() {
       console.log(25);
     },
 
+    
+
     iniciarJuego() {
       this.puntosnegativos = 0;
       this.open = true;
@@ -108,14 +113,17 @@ function juego() {
       this.cartas.forEach((carta) => {
         (carta.borrada = false)
         console.log(45);
+
       });
       
     },
 
      mostrarcartas(){
-      this.cartas.forEach(carta => (carta.girada = true));
+      this.cartas.forEach(carta => {(carta.girada = true)
+      this.esperar=false});
       setTimeout(() => {
-        this.cartas.forEach(carta => (carta.girada = false));
+        this.cartas.forEach(carta => {(carta.girada = false)
+        this.esperar=true});
       }, 4000)
     } 
 
