@@ -51,7 +51,7 @@ function juego() {
 
             this.cartasGiradas.forEach((carta) => (carta.borrada = true));
             if (this.cartasBorradas.length == this.cartas.length) {
-              alert("Enhorabuena has ganado");
+              setTimeout(() => { alert("Enhorabuena has ganado")},10);
               this.open = true;
             }
 
