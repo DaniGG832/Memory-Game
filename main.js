@@ -66,7 +66,7 @@ function juego() {
       }
     },
     iniciar() {
-      this.cartas.sort(() => Math.random() - 0.5),
+      this.cartas.sort(() => Math.random() - .5);
       this.iniciarJuego();
       this.mostrarcartas();
       this.open = false;
