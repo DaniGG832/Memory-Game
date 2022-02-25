@@ -49,7 +49,7 @@ function juego() {
           if (this.cartasGiradas[0].color == this.cartasGiradas[1].color) {
             lanzaparejaencontrada("Pareja Encontrada");
 
-            this.cartasGiradas.forEach((carta) => (carta.borrada = true));
+            this.cartasGiradas.forEach((carta1) => (carta1.borrada = true));
             if (this.cartasBorradas.length == this.cartas.length) {
               setTimeout(() => { alert("Enhorabuena has ganado")},10);
               this.open = true;
@@ -61,7 +61,7 @@ function juego() {
             this.puntosnegativos++;
             console.log(this.puntosnegativos);
           }
-          this.cartasGiradas.forEach((carta) => (carta.girada = false));
+          this.cartasGiradas.forEach((carta1) => (carta1.girada = false));
         }, 750);
       }
     },
