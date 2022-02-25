@@ -20,7 +20,7 @@
       <div
         x-data="juego()"
         
-        class="px-10 flex items-center justify-center min-h-screen"
+        class="px-10  items-center justify-center min-h-screen"
       >
         <h1 class="fixed top-0 right-0 m-10 font-bold text-3xl">
           <span x-text="puntos"></span>
@@ -30,10 +30,12 @@
           <button @click=" iniciar() "
           
                   
-          class="fixed bottom-10 left-10 bg-blue-500 text-white p-2 m-10 rounded"
+          class="fixed bottom-100 left-100 bg-blue-500 text-white p-2 m-10 rounded"
           >jugar</button>
   
         </div>
+
+        <div class="flex flex-col">
 
         <div x-show = "!open">
           <button @click=" iniciarJuego() "
@@ -56,6 +58,7 @@
             </div>
           </template>
         </div>
+      </div>
       </div>
     </div>
     <div
