@@ -46,10 +46,11 @@
   
         </div>
         
-        <div x-show="!open" class="flex-1 grid grid-cols-4 gap-10">
+        <div x-show="!open" class="flex-1 grid grid-cols-8 gap-10">
           <template x-for="carta in cartas">
-            <div>
+            <div >
               <button
+              x-text = "carta.girada ? carta.numero : ''"
                 :style="'background: ' + (carta.girada ? carta.color : 'grey')"
                 @click="girarCarta(carta)"
                 x-show="!carta.borrada"

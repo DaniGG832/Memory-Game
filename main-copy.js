@@ -8,7 +8,8 @@ document.addEventListener('alpine:init', () => {
       { color: 'green', girada: false, borrada: false },
       { color: 'red', girada: false, borrada: false },
       { color: 'blue', girada: false, borrada: false },
-      { color: 'yellow', girada: false, borrada: false }
+      { color: 'yellow', girada: false, borrada: false },
+      
     ],
 
     get cartasGiradas() {
